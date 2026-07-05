@@ -1,30 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/output.css">
     <title>Ujjwal</title>
+    <style>
+        .txt::before:hover{opacity: 1;}
+    </style>
 </head>
 <body class="dark:bg-charcoal bg-whity 
+            dark:text-whity text-charcoal
             min-h-dvh w-dvw 
             flex justify-center items-center flex-wrap
             p-4">
+    
+    <div class="absolute inset-0 flex justify-center items-center overflow-hidden -z-50 pointer-events-none" id="transit">
+        <div class="w-dvh h-dvh md:w-dvw md:h-dvw rounded-full relative before:-translate-y-1/2 before:translate-x-1/2
+                before:content-[''] before:block before:w-full before:h-full before:rounded-full before:bg-(--c)
+                before:scale-0 before:transition-transform before:duration-500 before:ease-in-out" 
+            id="ripple"></div></div>
+    </div>
 
-    <div class="indicator after:content-[' ']
-                h-3 w-3 z-10 after:h-12 after:w-12 after:z-20
-                top-6 right-6
+    <button type="button" id="theme"  class="pop g-btn glow ">
+    
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" id="icon">
+        </svg>
+        
+    </button>
+    
+
+    <div class="indicator after:content-['']
+                h-3 w-3 -z-20 after:h-12 after:w-12 after:z-20
+                top-6 left-6
                 rounded-full after:rounded-full
-                bg-red-700/50 after:backdrop-blur-md
+                dark:bg-red-700/50 bg-red-700/50 after:backdrop-blur-md
                 after:-translate-x-1/3 after:-translate-y-1/3
 
                 absolute after:absolute after:inset-0
                 "></div>
 
-    <div class="upper 
+    <!-- <h2 class="text-charcoal dark:text-whity text-3xl">DARK MODE</h2> -->
+    <div class="upper
                 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5
                 w-full max-w-7xl gap-6
                 m-2">
+
 
         <div class="pic 
                     col-span-1 md:col-span-2 lg:col-span-3
@@ -33,32 +54,15 @@
                 
         </div>
 
-        <div class="txt relative
-                    col-span-1 lg:col-span-2 order-2
-                    flex flex-auto justify-center items-center
-                    p-6
-                    min-h-full min-w-auto 
-                    before:w-[120%] before:aspect-square 
-                    rounded-2xl after:rounded-2xl
-                    shadow-xl/20 dark:shadow-xl/80 
-                    dark:after:bg-charcoal/75 after:bg-whity/75
-                    transition-transform duration-300 ease-out 
-                    hover:scale-102 cursor-pointer
-                    ">
-                
-
-                <p class="relative z-10 
-                dark:text-whity text-charcoal
-                text-lg antialiased italic tracking-wide
-                selection:bg-(--before-bg-s)
-                ">
-                <strong class="not-italic text-green-400">Name:</strong> Ujjwal Aggarwal <br>
-                <strong class="not-italic text-green-400">Academics:</strong> Incoming Computer Science undergraduate.<br>
-                <strong class="not-italic text-green-400">University:</strong> Lovely Professional University <br>
-            </p>
+        <div class="pop glow txt">
+                <p class="info"> <strong class="highlight">Name: </strong> Ujjwal Aggarwal</p>
+                <p class="info"> <strong class="highlight">Academics: </strong> Incoming Computer Science undergraduate</p>
+                <p class="info"> <strong class="highlight">University: </strong> Lovely Professional University</p>
                 </div>
 
     </div>
+
+<script src="src/js/style.js"></script>
 <script src="src/js/index.js"></script>
 </body>
 </html>

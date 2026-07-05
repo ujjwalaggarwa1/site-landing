@@ -2,56 +2,19 @@
 
 
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 
 @theme {
     --color-charcoal: oklch(18.22% 0 0);
-    --color-whity: oklch(95.69% 0.0197 315.67);
+    --color-whity: oklch(0.8871 0.0266 5.93);
     --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 }
 
-
 @layer base {
-
     html,
     body {
         font-family: var(--font-poppins);
     }
-}
-
-/* 
-@property --before-bg {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: oklch(0 0 0 / 0);
-} */
-
-
-.txt {
-    position: relative;
-    overflow: hidden;
-}
-
-.txt::before {
-    content: '';
-    position: absolute;
-    top: var(--y);
-    left: var(--x);
-    transform: translate(-50%, -50%);
-    /* background: radial-gradient(oklch(82.734% 0.25487 144.57), transparent, transparent);  */
-    background: radial-gradient(var(--before-bg), transparent, transparent);
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.txt:hover::before {
-    opacity: 1;
-}
-
-.txt::after {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    backdrop-filter: blur(20px);
 }
