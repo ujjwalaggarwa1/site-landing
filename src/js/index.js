@@ -1,5 +1,6 @@
 const savedTheme = localStorage.getItem('theme');
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const favicon = document.getElementById('favicon')
 
 let currentIndex = 0;
 let cycleTimer = null;
@@ -7,8 +8,10 @@ let isReversing = false;
 
 if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
     document.documentElement.classList.add('dark');
+    favicon.href = 'src/imgs/d_favicon.ico';
 } else {
     document.documentElement.classList.remove('dark');
+    favicon.href = 'src/imgs/favicon.ico';
     currentIndex = 6;
     cycleTimer = null;
     isReversing = true;
@@ -24,8 +27,10 @@ toggleBtn.addEventListener('click',async () => {
 
     const isDark = document.documentElement.classList.toggle('dark');
     if (isDark) {
+        favicon.href = 'src/imgs/d_favicon.ico';
         localStorage.setItem('theme', 'dark');
     } else {
+        favicon.href = 'src/imgs/favicon.ico';
         localStorage.setItem('theme', 'light');
     }
 
