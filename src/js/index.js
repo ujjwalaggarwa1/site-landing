@@ -21,7 +21,6 @@ toggleBtn.addEventListener('click',async () => {
     toggleSvgAnimation();
     
     await themeTransition();
-    // await sleep(2500);
 
     const isDark = document.documentElement.classList.toggle('dark');
     if (isDark) {

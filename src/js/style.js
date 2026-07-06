@@ -31,7 +31,7 @@ const TXT = `
 relative
 col-span-1 lg:col-span-2
 flex flex-auto justify-center items-start flex-col
-p-6 min-h-full min-w-auto
+p-6 min-h-1/4 max-h-max min-w-auto
 hover:scale-102
 `;
 

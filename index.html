@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-hidden">
+<html lang="en" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +30,12 @@
     </button>
     
 
-    <div class="indicator after:content-['']
+    <div class="indicator
+                after:content-['']
                 h-3 w-3 -z-20 after:h-12 after:w-12 after:z-20
                 top-6 left-6
                 rounded-full after:rounded-full
-                dark:bg-red-700/50 bg-red-700/50 after:backdrop-blur-md
+                dark:bg-red-700/60 bg-red-700/60 after:backdrop-blur-md
                 after:-translate-x-1/3 after:-translate-y-1/3
 
                 absolute after:absolute after:inset-0
@@ -44,14 +45,22 @@
     <div class="upper
                 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5
                 w-full max-w-7xl gap-6
-                m-2">
+                items-center
+                m-2 mt-16">
 
 
         <div class="pic 
                     col-span-1 md:col-span-2 lg:col-span-3
-                    h-64 md:h-auto min-h-62.5
+                    overflow-hidden
+                    gap-y-0
+                    flex justify-center
+                    max:w-2xl h-100 sm:h-200
+                    translate-y-7
                     ">
-                
+                <img src="src/imgs/u2.png" class="
+                                                w-full h-full
+                                                object-cover object-top
+                                                " alt="">
         </div>
 
         <div class="pop glow txt">

@@ -7,7 +7,7 @@
 
 @theme {
     --color-charcoal: oklch(18.22% 0 0);
-    --color-whity: oklch(0.8871 0.0266 5.93);
+    --color-whity: oklch(0.96 0.0038 85);
     --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 }
