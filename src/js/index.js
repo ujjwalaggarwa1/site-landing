@@ -51,8 +51,9 @@ const customColors = [
 
 cards.forEach(card => {
     card.onmousemove = function (e) {
-        let x = e.pageX - card.offsetLeft;
-        let y = e.pageY - card.offsetTop;
+        const rect = card.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
 
         card.style.setProperty('--x', x + 'px');
         card.style.setProperty('--y', y + 'px');

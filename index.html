@@ -15,6 +15,7 @@
             flex justify-center items-center flex-wrap
             p-4">
     
+    <!-- theme change animation element(s) -->
     <div class="absolute inset-0 flex justify-center items-center overflow-hidden -z-50 pointer-events-none" id="transit">
         <div class="w-dvh h-dvh md:w-dvw md:h-dvw rounded-full relative before:-translate-y-1/2 before:translate-x-1/2
                 before:content-[''] before:block before:w-full before:h-full before:rounded-full before:bg-(--c)
@@ -22,31 +23,37 @@
             id="ripple"></div></div>
     </div>
 
-    <button type="button" id="theme"  class="pop g-btn glow ">
-    
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" id="icon">
-        </svg>
+    <div class="headers h-16 w-dvw absolute top-0">
         
-    </button>
-    
-
-    <div class="indicator
+        <!-- site secrete indicator -->
+        <div class="indicator
                 after:content-['']
+                flex items-center justify-center shrink-0
+
                 h-3 w-3 -z-20 after:h-12 after:w-12 after:z-20
-                top-6 left-6
+                top-8 left-8
                 rounded-full after:rounded-full
-                dark:bg-red-700/60 bg-red-700/60 after:backdrop-blur-md
-                after:-translate-x-1/3 after:-translate-y-1/3
+                dark:bg-indicator/50 bg-indicator/80 after:backdrop-blur-md
+                absolute after:absolute
 
-                absolute after:absolute after:inset-0
-                "></div>
+                animate-[fade-out_linear_both]
+                [animation-timeline:scroll(root)]
 
-    <!-- <h2 class="text-charcoal dark:text-whity text-3xl">DARK MODE</h2> -->
+        "></div>
+        
+        <!-- theme change btn -->
+        <button type="button" id="theme"  class="pop g-btn glow ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" id="icon">
+            </svg>
+        </button>
+    </div>
+
+    <!-- the main upper section -->
     <div class="upper
                 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5
                 w-full max-w-7xl gap-6
                 items-center
-                m-2 mt-16">
+                m-2">
 
 
         <div class="pic 
@@ -64,12 +71,14 @@
         </div>
 
         <div class="pop glow txt">
-                <p class="info"> <strong class="highlight">Name: </strong> Ujjwal Aggarwal</p>
-                <p class="info"> <strong class="highlight">Academics: </strong> Incoming Computer Science undergraduate</p>
-                <p class="info"> <strong class="highlight">University: </strong> Lovely Professional University</p>
-                </div>
+                <p class="info"> <strong class="highlight">Name:</strong> Ujjwal Aggarwal</p>
+                <p class="info"> <strong class="highlight">University:</strong> Lovely Professional University</p>
+                <p class="info"> <strong class="highlight">Passion:</strong> Coding</p>
+        </div>
 
     </div>
+
+    
 
 <script src="src/js/style.js"></script>
 <script src="src/js/index.js"></script>

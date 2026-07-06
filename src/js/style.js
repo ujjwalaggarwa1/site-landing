@@ -9,8 +9,7 @@ const icon = document.getElementById('icon');
 
 
 const POP = `
-shadow-xl/20 dark:shadow-xl/80 
-dark:text-whity text-charcoal
+shadow-xl/20 dark:shadow-xl/80
 inset-shadow-sm dark:inset-shadow-whity/10 inset-shadow-charcoal/5
 `;
 
@@ -31,13 +30,13 @@ const TXT = `
 relative
 col-span-1 lg:col-span-2
 flex flex-auto justify-center items-start flex-col
-p-6 min-h-1/4 max-h-max min-w-auto
+gap-1
+px-6 py-8 min-h-1/4 max-h-max min-w-auto
 hover:scale-102
 `;
 
 const INFO = `
 relative z-10
-dark:text-whity text-charcoal
 text-lg antialiased italic tracking-wide
 `;
 
@@ -50,7 +49,7 @@ cursor-pointer
 `;
 
 const THEME_BTN = `
-absolute top-6 right-6 z-40 px-10
+fixed top-6 right-6 z-40 px-10
 rounded-full after:rounded-full
 flex items-center justify-center
 `;
