@@ -9,7 +9,8 @@
     --color-charcoal: oklch(18.22% 0 0);
     --color-whity: oklch(0.96 0.0038 85);
     --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
+    --indicator: oklch(63.7% 0.237 25.331);
+    /* --indicator: oklch(0.7841 0.2412 144.64); */
 }
 
 @layer base {
