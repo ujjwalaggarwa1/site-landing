@@ -1,3 +1,5 @@
+// import Lenis from 'lenis'
+
 const savedTheme = localStorage.getItem('theme');
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const favicon = document.getElementById('favicon')
@@ -6,6 +8,8 @@ let currentIndex = 0;
 let cycleTimer = null;
 let isReversing = false;
 
+
+// page loading theme settings
 if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
     document.documentElement.classList.add('dark');
     favicon.href = 'src/imgs/d_favicon.ico';
@@ -18,6 +22,7 @@ if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
 }
 
 
+// color theme changing btn
 const toggleBtn = document.getElementById('theme');
 
 toggleBtn.addEventListener('click',async () => {
@@ -44,7 +49,7 @@ toggleBtn.addEventListener('click',async () => {
 });
 
 
-
+// glowing cards position and random color selector
 let cards = document.querySelectorAll('.glow');
 const customColors = [
     'oklch(0.6518 0.2536 22.87)', //red-ish
@@ -77,6 +82,8 @@ cards.forEach(card => {
     card.addEventListener('mouseenter', setColor);
 });
 
+
+// theme btn sun-moon animation
 const svg = document.getElementById('icon');
 
 const svg_paths = [
@@ -130,7 +137,6 @@ const svg_paths = [
 
 svg.innerHTML = svg_paths[currentIndex];
 
-
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function toggleSvgAnimation() {
@@ -171,7 +177,7 @@ async function toggleSvgAnimation() {
 };
 
 
-
+// page theme change bubble animation 
 async function themeTransition() {
     const transit_div = document.getElementById('transit');
 
@@ -196,3 +202,16 @@ async function themeTransition() {
 
 
 };
+
+
+// lenis smooth scroll
+const lenis = new Lenis({
+    duration: 1.2
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

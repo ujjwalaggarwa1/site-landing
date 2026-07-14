@@ -49,7 +49,7 @@ cursor-pointer
 `;
 
 const THEME_BTN = `
-fixed top-6 right-6 z-40 px-10
+fixed top-6 right-6 z-50 px-10
 rounded-full after:rounded-full
 flex items-center justify-center
 `;
