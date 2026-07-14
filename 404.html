@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body {
+            background: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            width: 100vw;
+            height: 100vh;
+
+            /* max-width: 100vw; */
+        }
+
+        iframe {
+            border: none;
+            transform: scale(3.5);
+            transform-origin: center center;
+            max-width: dvw;
+            object-position: center;
+        }
+
+        #cat{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* #plane{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100dvw;
+            height: auto;
+        } */
+
+        /* Large tablets */
+        @media (max-width: 1024px) {
+            iframe {
+                transform: scale(2.8);
+                transform-origin: center center;
+            }
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            iframe {
+                transform: scale(2.2);
+                transform-origin: center center;
+            }
+        }
+
+        /* Phones */
+        @media (max-width: 480px) {
+            iframe {
+                transform: scale(2);
+                transform-origin: center center;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 360px) {
+            iframe {
+                transform: scale(1.3);
+                transform-origin: center center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <iframe src="https://lottie.host/embed/cbd722b1-9e01-4e76-95a8-a0f69b0422ae/iOrceOUi7V.lottie"></iframe>
+    </div>
+    <img id="cat" src="src/imgs/Loader cat.svg" alt="cat">
+    <!-- <img src="src/imgs/Airplane Lottie Animation.svg" alt="" id="plane"> -->
+</body>
+
+</html>
